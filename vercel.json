@@ -1,0 +1,18 @@
+{
+  "build": {
+    "env": {
+      "GO_BUILD_FLAGS": "-ldflags '-s -w'"
+    }
+  },
+  "functions": {
+    "api/index.go": {
+      "runtime": "go@1.21"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.go"
+    }
+  ]
+}
